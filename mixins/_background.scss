@@ -1,0 +1,9 @@
+// Background
+// @include bg-opacity(#000,0.85);
+// --------------------------------------------------
+
+// Background Opacity
+@mixin bg-opacity($color, $opacity) {
+  background: $color;
+  background: rgba($color, $opacity);
+}

@@ -1,0 +1,25 @@
+// Custom Scrollbar
+// Usage: @include scrollbar(width, foreground colour, background colour);
+// Example: @include scrollbar(1.5em, #eee, #000);
+// --------------------------------------------------
+
+@mixin scrollbar($size, $foreground-colour, $background-colour: mix($foreground-colour, white,  50%)) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: $foreground-colour;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: $background-colour;
+  }
+
+  body {
+    scrollbar-face-color: $foreground-colour;
+    scrollbar-track-color: $background-colour;
+  }
+}

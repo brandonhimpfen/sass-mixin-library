@@ -1,0 +1,9 @@
+// Font Size
+// Usage: @include font-size-rem(26px);
+// --------------------------------------------------
+
+// Pixel to rem font size converter
+@mixin font-size-rem($size) {
+  font-size: $size;
+  font-size: font-rem($size);
+}

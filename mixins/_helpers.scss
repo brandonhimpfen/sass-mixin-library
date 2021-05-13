@@ -1,0 +1,29 @@
+// Helpers
+// --------------------------------------------------
+
+// Pixel to rem converter for fonts
+@function font-rem($size) {
+  $rem-size: $size / $html-font-size;
+  @return $rem-size * 1rem;
+}
+
+// Pixel to rem converter in general
+@function calculate-rem($size) {
+  $rem-size: $size / 16px;
+  @return $rem-size * 1rem;
+}
+
+// Vendor prefixing for shorthand properties
+@mixin vendor-prefixes($property, $value) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	-o-#{$property}: $value;
+}
+
+// :hover, :active, and :focus combined styles
+@mixin hoverActiveFocus($property, $value) {
+    &:hover, &:active, &:focus {
+        #{$property}: $value;
+    }
+}

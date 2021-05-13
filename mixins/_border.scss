@@ -1,0 +1,16 @@
+// Border
+// Usage shorthand: @include border(1px solid #000);
+// Usage longhand: @include border-all(1px, solid, #000);
+// --------------------------------------------------
+
+// Border shorthand version
+@mixin border($border) {
+  border: $border;
+}
+
+// Border longhand version
+@mixin border-all($width, $style, $color) {
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+}

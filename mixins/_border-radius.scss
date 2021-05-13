@@ -1,0 +1,29 @@
+// Border Radius
+// Multiple Side Usage: @include border-radius(top left, top right, bottom right, bottom left);
+// Multiple Side Example: @include border-radius(5px 10px 15px 20px);
+// Single Side Usage: @include border-top-radius(5px);
+// --------------------------------------------------
+
+// Multiple sides
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  @include vendor-prefixes(border-radius, $radius);
+}
+
+// Single side
+@mixin border-top-radius($radius) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+}

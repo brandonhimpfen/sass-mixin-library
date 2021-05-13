@@ -1,0 +1,9 @@
+// Clearfix
+// Usage: @include size(width, height);
+// Example: @include size(1px, 1px);
+// --------------------------------------------------
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}

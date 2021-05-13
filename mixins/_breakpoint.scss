@@ -1,0 +1,22 @@
+// Breakpoint
+// Usage: @include breakpoint(size) { }
+// Example: @include breakpoint(lg) { }
+// --------------------------------------------------
+
+$breakpoints: (
+  'xs': ( max-width: $screen-xs ),
+  'sm': ( min-width: $screen-sm ),
+  'md': ( min-width: $screen-md ),
+  'lg': ( min-width: $screen-lg )
+);
+
+@mixin breakpoint($name) {
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Cannot find breakpoint size `#{$name}`.";
+  }
+}

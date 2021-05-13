@@ -1,0 +1,11 @@
+// Font Face
+// Usage: @include font-face(myFont, myFont.eot, myFont.woff, myFont.ttf, myFont.svg, #myFont);
+// --------------------------------------------------
+
+@mixin font-face($fontFamily, $eotSrc, $woffSrc, $ttfSrc, $svgSrc, $svgID) {
+  font-family: $fontFamily;
+  src: url($eotSrc)  format('eot'),
+       url($woffSrc) format('woff'),
+       url($ttfSrc)  format('truetype'),
+       url($svgSrc + $svgID) format('svg');
+}

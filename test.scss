@@ -1,0 +1,121 @@
+// Sass Mixin Library
+// Test and example file
+// http://www.himpfen.com/sass-mixin-library/
+// Copyright Brandon Himpfen
+// MIT License
+// --------------------------------------------------
+
+@import "mixins";
+
+@include scrollbar(1.5em, #eee, #000);
+
+body {
+  @include bg-opacity(#000,0.85);
+}
+
+body {
+  @include font-face(myFont, 'myFont.eot', 'myFont.woff', 'myFont.ttf', 'myFont.svg', '#myFont');
+}
+
+.text-shadow {
+  @include text-shadow(1px, 2px, 4px, #000);
+}
+
+.box-vertical {
+  width: 250px;
+  height: 250px;
+  @include bg-gradient-vertical(#fff, #000);
+}
+
+.box-horizontal {
+  width: 250px;
+  height: 250px;
+  @include bg-gradient-horizontal(#fff, #000);
+}
+
+.box-radial {
+  width: 250px;
+  height: 250px;
+  @include bg-radial(#fff, 0%, #000, 100%);
+}
+
+.padding {
+  @include padding-all(26px, 10px, null, 10px);
+}
+
+.padding-shorthand {
+  @include padding(26px 10px 10px);
+}
+
+.margin {
+  @include margin-all(26px, null, null, 10px);
+}
+
+.margin-shorthand {
+  @include margin(26px 10px 10px);
+}
+
+p {
+  @include font-size-rem(26px);
+}
+
+.border-radius {
+  background: #000;
+  @include size(100px, 100px);
+  @include border-radius(5px 10px 15px 20px);
+}
+
+img.with-border-image {
+  @include border-image("border.png", 100%, 1, 0, stretch);
+}
+
+.size {
+  @include size(1px, 1px);
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+@include breakpoint(lg) {
+  .breakpoint {
+    color: black;
+  }
+}
+
+.btn {
+  text-decoration: none;
+  background-color: white;
+  color: #888;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 5px;
+
+    @include element('price') {
+      background-color: white;
+      color: #fff;
+      padding-right: 12px;
+      padding-left: 12px;
+      margin-right: -10px;
+      font-weight: 600;
+      background-color: #333;
+      opacity: .4;
+      border-radius: 5px 0 0 5px;
+    }
+
+    @include modifier('blue') {
+          border-color: #0074D9;
+          color: white;
+          background-color: #0074D9;
+
+        @include element('big') {
+            font-size: 28px;
+            padding: 10px;
+            font-weight: 400;
+        }
+    }
+}
