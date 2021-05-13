@@ -3,7 +3,6 @@
 Sass Mixin Library is a simple, lightweight, yet powerful mixin library for Sass.
 
 [![GitHub](https://srv-cdn.himpfen.io/badges/github/github-square-large.svg)](https://clicksrv.net/3L) &nbsp; [![BuyMeACoffee](https://srv-cdn.himpfen.io/badges/buymeacoffee/buymeacoffee-square-large.svg)](https://clicksrv.net/3M)
-![image](https://user-images.githubusercontent.com/1442931/118193303-77135280-b415-11eb-8e68-055444eac138.png)
 
 ## How-to Use
 
